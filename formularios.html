@@ -5,18 +5,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso JS 2a Parte</title>
-  <script> type = 'txt/javascript' src = 'js/32.ejercicioDom.js' </script>
+  <script type = 'text/javascript' src = 'js/32.ejercicoDom.js'> </script>
+  <style>
+    .box{
+      width: 250px;
+      height: 250px;
+      float: left;
+      margin: 20px;
+    }
+    .dashed{
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
 </head>
 <body>
+
+<!-- EJEMPLO :  -->
+<!-- <h3>Bienvenidos al DOM</h3>
+<p>Mostrando parrafo en consola con querySelector</p>
+<h1 id="tituloh1">GetElementById</h1> -->
+<!-- FIN EJEMPLO -->
+
 <!-- 
   1. Crear un Formulario con : Nombre, Apellidos y Edad
-  2. Boton de enviar el formulario : Eventos submit
+  2. Boton de enviar el formulario : Evento submit
   3. Mostrar datos por pantalla
-  4. Botón que muestre los datos actuales dle formulario
+  4. Validación del formulario
 -->
-
-
   <h1> Ejercicios DOM, Eventos y Funciones </h1>
-  
+  <div class="box">
+    <form action="#" method="POST" id="idFomulario" onsubmit="return false">
+      <label for="nmNombre">Nombre:</label> <br/>
+      <input type="text" name="nmNombre" id="idNombre" /> <br/>
+      <label for="nmApellido">Apellido:</label> <br/>
+      <input type="text" name="nmApellido" id="idApellido" /> <br/>
+      <label for="nmEdad">Edad:</label> <br/>
+      <input type="number" name="nmEdad" id="idEdad" /> <br/> <br/>
+      <input type="submit" value="enviar" id="idSubmit" />
+    </form>
+  </div>
+  <div class="box dashed">
+    <h2>Información</h2>
+    <hr>
+  </div>
 </body>
 </html>
