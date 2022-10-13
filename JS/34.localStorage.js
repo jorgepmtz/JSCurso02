@@ -23,7 +23,7 @@ window.addEventListener('load', function(){
   this.localStorage.setItem('usuario', JSON.stringify(usuario));
 
   // Recuperar el objeto usuario
-  console.log(this.localStorage.getItem('usuario') + ' <-- es una cadena string'); // -- me devuelve una cadena string
+  console.log(this.localStorage.getItem('usuario') + ' <-- es una cadena string'); // -- me devuelve una cadena string entonces usamos JSON.parse
   var userjs = JSON.parse(this.localStorage.getItem('usuario'));
   console.log(userjs);   // ---- Ahora si es un objeto js -----
   // --- enviando a página --
@@ -31,7 +31,7 @@ window.addEventListener('load', function(){
 
   // ---- con esta instrucción borro el localStorage en -> Aplicación -> Almacenamiento local
   // this.localStorage.removeItem('usuario'); // --- solo borra el objeto usuario
-  this.localStorage.clear();  // ----- borra todo el localStorage ----
+  this.localStorage.clear();  // ----- borra todo el localStorage ----   
 
 
 }) // ----- Fin window.addEventListener - load

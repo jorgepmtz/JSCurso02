@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<h1> Ejemplo simple de querySelector y querySelectorAll </h1>
+
+<div id="caja" > <p class="primero"> es un 1er parrafo dentro de un div </p> </div>
+<div id="caja" > <p class="segundo"> es un 2do parrafo dentro de un div </p> </div>
+
+<script>
+
+  const parrafo_primero = document.querySelector('#caja p.primero');
+  console.log(parrafo_primero);
+  
+  const parrafo_segundo = document.querySelector('#caja p.segundo');
+  console.log(parrafo_segundo);
+  
+  const parrafo = document.querySelector('#caja p');
+  console.log(parrafo);
+
+  const parrafo_all = document.querySelectorAll('#caja p');
+  console.log(parrafo_all);
+
+
+</script>
+
+
+<!--   
+<div id="foo\bar" class="foo\bar" ></div>
+<div id="foo:bar" class="foo:bar" ></div>
+
+<script>
+  console.log('#foo\bar');               // "#fooar"
+  document.querySelector('#foo\bar');    // No coincide con nada
+
+  console.log('#foo\\bar');              // "#foo\bar"
+  console.log('#foo\\\\bar');            // "#foo\\bar"
+  document.querySelector('#foo\\\\bar'); // Coincide con el primer div
+
+  document.querySelector('#foo:bar');    // No coincide con nada
+  document.querySelector('#foo\\:bar');  // Coincide con el segundo div
+</script> -->
+
+
+</body>
+</html>
