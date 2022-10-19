@@ -23,6 +23,9 @@ console.log(div_usuarios);
     .then(data => data.json())
     .then(antonette => {
       listarAntonette(antonette);
+    })
+    .catch( error => {
+      alert('Error en las peticiones') // Si vambio 'https://jsonplaceholder.typicode.com/users' por 'https://jsonplaceholder.tipicode.com/users'
     });
 
 // ------- Funnción que hace fetch sobre todos los usuarios ---------    
